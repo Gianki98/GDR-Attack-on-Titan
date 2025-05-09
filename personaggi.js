@@ -177,3 +177,5 @@ const personaggi = [
       "Sopravvissuto a due cadute delle mura, ha giurato di non lasciare che accada una terza volta.",
   },
 ];
+
+module.exports = personaggi; //personaggi è la costante dichiarata nel file
