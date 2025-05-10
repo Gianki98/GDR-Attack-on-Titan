@@ -1,181 +1,344 @@
 const personaggi = [
+
   {
     nome: "Eren Jaeger",
     eta: 15,
     divisione: "Corpo di Ricerca",
     grado: "Recluta",
     specializzazione: "Combattimento corpo a corpo",
-    titano: "Attacco",
+    gigante: "Attacco",
     statistiche: {
-      forza: 7,
-      agilita: 8,
-      intelligenza: 5,
-      coraggio: 10,
-      carisma: 4,
+      livello: 1,
+      esperienza: 0,
+      vita: 8,
+      attacco: 7,
+      energia: 5,
+      difesa: 6,
     },
-    abilita: ["Furia del titano", "Manovra 3D avanzata"],
-    background:
-      "Ha giurato di sterminare tutti i titani dopo la distruzione di Shiganshina.",
-  },
-  {
-    nome: "Kael Riven",
-    eta: 22,
-    divisione: "Guarnigione",
-    grado: "Caporale",
-    specializzazione: "Tattiche difensive",
-    titano: null,
-    statistiche: {
-      forza: 6,
-      agilita: 5,
-      intelligenza: 8,
-      coraggio: 6,
-      carisma: 7,
+    abilita: [
+    {
+      nome: "Furia del Titano",
+      descrizione: "Eren si trasforma nel gigante di Attacco per un turno.",
+      costo: 3,
+      effetto: "Aumenta l'attacco e la difesa del 50% per un turno."
     },
-    abilita: ["Costruzione di barricate", "Coordinamento truppe"],
-    background:
-      "Veterano di Trost, specializzato in strategie di contenimento.",
+    {
+      nome: "Manovra 3D Avanzata",
+      descrizione: "",
+      costo: 2,
+      effetto: "Infligge il 10% di attacco in più per due turni."
+    }
+  ],
+    background: "Ha giurato di sterminare tutti i titani dopo la distruzione di Shiganshina.",
   },
+
+
   {
-    nome: "Lira Velkan",
-    eta: 19,
+    nome: "Mikasa Ackerman",
+    eta: 15,
     divisione: "Corpo di Ricerca",
     grado: "Recluta",
-    specializzazione: "Manovra 3D",
-    titano: null,
+    specializzazione: "Manovree aeree",
+    gigante: null,
     statistiche: {
-      forza: 5,
-      agilita: 9,
-      intelligenza: 6,
-      coraggio: 8,
-      carisma: 4,
+      livello: 1,
+      esperienza: 0,
+      vita: 9,
+      attacco: 8,
+      energia: 7,
+      difesa: 8,
     },
-    abilita: ["Scatto aereo", "Attacco circolare"],
-    background: "Agile e silenziosa, preferisce l’azione alla pianificazione.",
-  },
-  {
-    nome: "Damon Kreiss",
-    eta: 27,
-    divisione: "Brigata Speciale",
-    grado: "Capitano",
-    specializzazione: "Interrogatori e sorveglianza",
-    titano: null,
-    statistiche: {
-      forza: 6,
-      agilita: 6,
-      intelligenza: 9,
-      coraggio: 5,
-      carisma: 7,
+    abilita: [
+    {
+      nome: "Furia Ackerman",
+      descrizione: "",
+      costo: 2,
+      effetto: "Aumenta l'attacco del 10% per 2 turni."
     },
-    abilita: ["Analisi comportamentale", "Manipolazione"],
-    background:
-      "Addestrato per proteggere il Re, ha una morale ambigua e un passato oscuro.",
+    {
+      nome: "Sciarpa Rossa",
+      descrizione: "Mikasa stringe a se la sua sciarpa rossa, ricordando il giorno in cui Eren le ha salvato la vita.",
+      costo: 1,
+      effetto: "Aumenta la difesa del 10% per 2 turni."
+    }
+  ],
+    background: "Salvata da Eren da bambina, è profondamente legata a lui e si è unita al Corpo di Ricerca per proteggerlo e combattere i titani.",
   },
+
+
   {
-    nome: "Mira Ral",
-    eta: 18,
+    nome: "Armin Arlert",
+    eta: 15,
     divisione: "Corpo di Ricerca",
     grado: "Recluta",
-    specializzazione: "Supporto medico",
-    titano: null,
+    specializzazione: "Strategia e supporto tattico",
+    gigante: null,
     statistiche: {
-      forza: 4,
-      agilita: 6,
-      intelligenza: 9,
-      coraggio: 7,
-      carisma: 6,
+      livello: 1,
+      esperienza: 0,
+      vita: 7,
+      attacco: 5,
+      energia: 5,
+      difesa: 6,
     },
-    abilita: ["Pronto soccorso", "Preparazione pozioni"],
-    background:
-      "Orfana cresciuta da un chirurgo, crede che salvare vite sia più importante che toglierle.",
+    abilita: [
+    {
+      nome: "",
+      descrizione: "",
+      effetto: ""
+    },
+    {
+      nome: "",
+      descrizione: "",
+      effetto: ""
+    }
+  ],
+  background: "Timido ma incredibilmente brillante, Armin si è unito al Corpo di Ricerca per cambiare il mondo e scoprire la verità oltre le mura.",
   },
+
   {
-    nome: "Rogan Brandt",
-    eta: 30,
-    divisione: "Guarnigione",
+    nome: "Erwin Smith", // Aggiungere come personaggio sbloccabile poichè è leggermente OP (?)
+    eta: 39,
+    divisione: "Corpo di Ricerca",
     grado: "Comandante",
-    specializzazione: "Armi pesanti",
-    titano: null,
+    specializzazione: "Leadership e strategia militare",
+    gigante: null,
     statistiche: {
-      forza: 9,
-      agilita: 4,
-      intelligenza: 6,
-      coraggio: 9,
-      carisma: 6,
+      livello: 1,
+      esperienza: 0,
+      vita: 7,
+      attacco: 8,
+      energia: 10,
+      difesa: 7,
     },
-    abilita: ["Uso cannoni anti-Titano", "Comando sul campo"],
-    background: "Ha guidato la difesa di Utopia per tre giorni senza rinforzi.",
-  },
-  {
-    nome: "Seren Aven",
-    eta: 20,
-    divisione: "Cadetti",
-    grado: "Recluta",
-    specializzazione: "Ricognizione",
-    titano: null,
-    statistiche: {
-      forza: 5,
-      agilita: 8,
-      intelligenza: 7,
-      coraggio: 6,
-      carisma: 5,
+    abilita: [
+    {
+      nome: "Offrite i vostri cuori!",
+      descrizione: "Erwin incita il team ad offrire il proprio cuore per la battaglia.",
+      costo: 5,
+      effetto: "Aumenta l'attacco e la difesa del team del 20% per 2 turni."
     },
-    abilita: ["Mimetizzazione", "Tracciamento"],
-    background:
-      "Nata fuori le mura, sa sopravvivere meglio dei suoi istruttori.",
+    {
+      nome: "",
+      descrizione: "",
+      effetto: ""
+    }
+  ],
+    background: "Comandante del Corpo di Ricerca, disposto a sacrificare tutto, anche sé stesso, per la libertà e la verità sull'origine dei titani.",
   },
+
+
   {
-    nome: "Thorn Heller",
-    eta: 24,
-    divisione: "Brigata Speciale",
-    grado: "Caporale",
-    specializzazione: "Difesa ravvicinata",
-    titano: null,
-    statistiche: {
-      forza: 8,
-      agilita: 7,
-      intelligenza: 4,
-      coraggio: 9,
-      carisma: 3,
-    },
-    abilita: ["Scudo rotante", "Urlo da battaglia"],
-    background:
-      "Considerato un muro umano, è temuto e rispettato per la sua forza bruta.",
-  },
-  {
-    nome: "Elya Kraus",
-    eta: 23,
+    nome: "Levi Ackerman",
+    eta: 35,
     divisione: "Corpo di Ricerca",
     grado: "Capitano",
-    specializzazione: "Strategia",
-    titano: null,
+    specializzazione: "Eliminazione rapida dei titani e combattimento ravvicinato",
+    gigante: null,
     statistiche: {
-      forza: 4,
-      agilita: 5,
-      intelligenza: 10,
-      coraggio: 8,
-      carisma: 6,
+      livello: 1,
+      esperienza: 0,
+      vita: 8,
+      attacco: 8,
+      energia: 7,
+      difesa: 7,
     },
-    abilita: ["Pianificazione imboscate", "Comando remoto"],
-    background: "Allieva di Erwin Smith, ha ereditato il suo acume tattico.",
-  },
-  {
-    nome: "Garrik Stone",
-    eta: 29,
-    divisione: "Guarnigione",
-    grado: "Capitano",
-    specializzazione: "Difesa delle mura",
-    titano: null,
-    statistiche: {
-      forza: 7,
-      agilita: 4,
-      intelligenza: 6,
-      coraggio: 8,
-      carisma: 7,
+    abilita: [
+    {
+      nome: "Attacco trottola.",
+      costo: 3,
+      descrizione: "",
+      effetto: "Infligge un danno del 20% in più. "
     },
-    abilita: ["Comando difensivo", "Riparazione strutture"],
-    background:
-      "Sopravvissuto a due cadute delle mura, ha giurato di non lasciare che accada una terza volta.",
+    {
+      nome: "",
+      costo: 0,
+      descrizione: "",
+      effetto: "",
+    }
+  ],
+    background: "Considerato l’uomo più forte dell’umanità, Levi è temuto dai nemici e rispettato dai suoi uomini. Dietro la freddezza, nasconde un forte senso di giustizia e lealtà incrollabile verso Erwin.",
   },
 ];
+
+
+const giganti = [
+  {
+    nome: "Gigante 5m",
+    statistiche: {
+      vita: 8,
+      attacco: 4,
+      energia: 5,
+      difesa: 5,
+    },
+    abilita: [
+    {
+      nome: "",
+      costo: 0,
+      descrizione: "",
+      effetto: "",
+    },
+    {
+      nome: "",
+      costo: 0,
+      descrizione: "",
+      effetto: "",
+    }
+  ],
+    background: "Creatura misteriosa dall'aspetto umanoide e priva di raziocinio. Compare improvvisamente in aree abitate, rappresentando una minaccia costante per l'umanità.",
+  },
+
+  {
+    nome: "Gigante 10m",
+    statistiche: {
+      vita: 10,
+      attacco: 6,
+      energia: 5,
+      difesa: 6,
+    },
+    abilita: [
+    {
+      nome: "",
+      costo: 0,
+      descrizione: "",
+      effetto: "",
+    },
+    {
+      nome: "",
+      costo: 0, 
+      descrizione: "",
+      effetto: "",
+    }
+  ],
+    background: "Creatura misteriosa dall'aspetto umanoide e priva di raziocinio. Compare improvvisamente in aree abitate, rappresentando una minaccia costante per l'umanità.",
+  },
+
+  {
+    nome: "Gigante 15m",
+    statistiche: {
+      vita: 10,
+      attacco: 8,
+      energia: 5,
+      difesa: 7,
+  },
+  abilita: [
+    {
+      nome: "",
+      costo: 0,
+      descrizione: "",
+      effetto: "",
+    },
+    {
+      nome: "",
+      costo: 0,
+      descrizione: "",
+      effetto: "",
+    }
+  ],
+    background: "Questo tipo di titano è raramente incontrato ma estremamente pericoloso. La sua grandezza e forza bruta gli permettono di dominare interi campi di battaglia, costringendo le forze umane a manovre rischiose per eliminarlo.",
+  }
+]
+
+const boss = [
+  {
+    nome: "Gigante colossale",
+    statistiche: {
+      vita: 15,
+      attacco: 10,
+      energia: 5,
+      difesa: 8,
+    },
+    abilita: [
+    {
+      nome: "Evaporazione di calore",
+      costo: 5,
+      descrizione: "Rilascia un'onda di calore che danneggia i nemici.",
+      effetto: "Questa abilità ha una probabiltà del 50% di lasciare un membro del team scottato.",
+    },
+    {
+      nome: "",
+      descrizione: "",
+      effetto: "",
+    }
+  ],
+  background: "Il più imponente tra tutti i titani conosciuti. La sua sola presenza può cambiare il corso di una battaglia. Non si manifesta spesso, ma quando lo fa, il suo potere distruttivo è ineguagliabile.",
+  },
+
+  {
+    nome: "Gigante corazzato",
+    statistiche: {
+      vita: 12,
+      attacco: 8,
+      energia: 5,
+      difesa: 15,
+    },
+    abilita: [
+    {
+      nome: "Corazza rinforzata",
+      costo: 8,
+      descrizione: "Il gigante corazzato rinforza la sua corazza, rendendola più resistente.",
+      effetto: "Il gigante corazzato aumenta la sua difesa del 50% per 2 turni.",
+    },
+    {
+      nome: "Carica corazzata",
+      costo: 5,
+      descrizione: "Il gigante corazzato carica contro il nemico, infliggendo danni.",
+      effetto: "Il gigante corazzato causa il doppio del danno se l'attacco va a segno.",
+    }
+  ],
+    background: "Creatura imponente dotata di una protezione naturale che lo rende un avversario quasi inarrestabile.",
+  },
+
+  {
+    nome: "Gigante femmina",
+    statistiche: {
+      vita: 12,
+      attacco: 8,
+      energia: 5,
+      difesa: 13,
+    },
+    abilita: [
+    {
+      nome: "Cristalizzazione",
+      costo: 3,
+      descrizione: "Il gigante femmina si cristallizza per proteggersi.",
+      effetto: "Il gigante femmina aumenta la sua difesa del 50% per 2 turni.",
+    },
+    {
+      nome: "Richiamo",
+      costo: 5,
+      descrizione: "Il gigante femmina emette un urlo che richiama altri giganti.",
+      effetto: "Possibilità del 30% di evocare un gigante 5m o 10m.",
+    }
+  ],
+    background: "Il Gigante Femmina unisce forza fisica, agilità e intelligenza tattica. È noto per la sua capacità di adattarsi alle situazioni di combattimento con strategie mirate e movimenti agili.",
+  },
+
+  {
+    nome: "Gigante bestia",
+    statistiche: {
+      vita: 15,
+      attacco: 10,
+      energia: 13,
+      difesa: 8,
+    },
+
+    abilita: [
+    {
+      nome: "Lancio devastante.",
+      costo: 3,
+      descrizione: "Il gigante bestia scaglia delle pietre a tutto il team.",
+      effetto: "Possibilità del 30% di essere colpiti dalle pietre lanciate.",
+    },
+    {
+      nome: "Boato del gigante bestia",
+      costo: 5,
+      descrizione: "Usa il boato per richiamare a se i giganti, rafforzandoli per 2 turni.",
+      effetto: "Possibilità del 50% di evocare un gigante 5m o 10m. In più potenza il loro attacco e la loro difesa del 20% per 2 turni.",
+    }
+    ],
+    background: "Gigante dall’aspetto animalesco e insolito, è temuto per la sua intelligenza, il comportamento calmo ma calcolatore, e la capacità di infliggere danni su larga scala anche da lontano.",
+  }
+]
 
 module.exports = personaggi; //personaggi è la costante dichiarata nel file
