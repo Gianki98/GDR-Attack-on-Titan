@@ -5,7 +5,7 @@ function attacco(attaccante, difensore) {
     console.log("Non è possibile effettuare l'attacco.");
     return;
   }
-  const danno = Math.floor(Math.random() * attaccante.statistiche.attacco) + 1;
+  let danno = Math.floor(Math.random() * attaccante.statistiche.attacco) + 1;
   const attaccanteAbilita = attaccante.abilita.find(
     (abilita) => abilita.attivo
   );
@@ -15,7 +15,7 @@ function attacco(attaccante, difensore) {
 
   if (difensoreAbilita) {
     difensore.statistiche.difesa =
-      difensore.statistiche.difesa + difensore.statistiche.difensore * 0.05;
+      difensore.statistiche.difesa + difensore.statistiche.difesa * 0.05;
     console.log(
       `${difensore.nome} attiva l'abilita ${difensoreAbilita.nome} e incrementa la sua difesa ${difensore.statistiche.difesa}`
     );

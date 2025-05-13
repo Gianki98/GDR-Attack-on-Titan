@@ -38,6 +38,7 @@ const giganti = [
       costo: 0,
       descrizione: "",
       effetto: "",
+      attivo: false,
     },
     {
       nome: "",

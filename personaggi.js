@@ -53,7 +53,9 @@ const personaggi = [
       nome: "Furia Ackerman",
       descrizione: "",
       costo: 2,
-      effetto: "Aumenta l'attacco del 10% per 2 turni."
+      effetto: "Aumenta l'attacco del 10% per 2 turni.",
+      attivo: false,
+
     },
     {
       nome: "Sciarpa Rossa",
