@@ -22,12 +22,15 @@ let intervallo = setInterval(() => {
   attacco(personaggi[1], giganti[1]);
   if (personaggi[1].statistiche.vita <= 0 || giganti[1].statistiche.vita <= 0) {
     clearInterval(intervallo);
-    setTimeout(() => {
+    
       if (personaggi[1].statistiche.vita > 0) {
-        console.log(`${personaggi[1].nome} ha vinto l'incontro`);
+        setTimeout(() => {
+          console.log(`${personaggi[1].nome} ha vinto l'incontro`);
+        }, 5000);
       } else {
-        console.log(`${giganti[1].nome} ha vinto l'incontro`);
+        setTimeout(() => {
+          console.log(`${giganti[1].nome} ha vinto l'incontro`);
+        }, 5000);
       }
-    }, 5000);
   }
 }, 2000);
