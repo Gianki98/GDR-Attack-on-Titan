@@ -1,14 +1,12 @@
 function attacco(attaccante, difensore) {
-  console.log(`Il combattimento ha inizio..`);
-  console.log(`${attaccante.nome} VS ${difensore.nome}`);
-
-  if (attaccante.statistiche.vita <= 0 && difensore.statistiche.vita <= 0) {
+  
+  if (attaccante.statistiche.vita <= 0 || difensore.statistiche.vita <= 0) {
     console.log("Non è possibile effettuare l'attacco.");
     return;
   }
 
   //Delay prima di calcolare il danno.
-  setTimeout(() => {
+  // setTimeout(() => {
     let danno = Math.floor(Math.random() * attaccante.statistiche.attacco) + 1;
     const attaccanteAbilita = attaccante.abilita.find(
       (abilita) => abilita.attivo
@@ -22,13 +20,14 @@ function attacco(attaccante, difensore) {
     //Se c'è un'abilità attiva si aumenta o la difesa o l'attacco dei pg.
 
     // Delay extra per far vedere il bonus abilità, prima dell'applicazione vera e propria.
-    setTimeout(() => {
+    // 
       if (difensoreAbilita) {
         difensore.statistiche.difesa =
-          difensore.statistiche.difesa + difensore.statistiche.difesa * 0.05;
-        console.log(
+          Math.round(difensore.statistiche.difesa + difensore.statistiche.difesa * 0.05);
+        setTimeout(() => {console.log(
           `${difensore.nome} attiva l'abilita ${difensoreAbilita.nome} e incrementa la sua difesa ${difensore.statistiche.difesa}`
         );
+        }, 1000)
       }
 
       if (attaccanteAbilita) {
@@ -61,8 +60,8 @@ function attacco(attaccante, difensore) {
           return;
         }
       }
-    }, 3000);
-  }, 5000);
+  //   }, 3000);
+  // }, 5000);
 }
 
 module.exports = { attacco }; //attacco è la funzione dichiarata nel file e che dobbiamo esportare con {}.
