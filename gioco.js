@@ -1,6 +1,6 @@
 const personaggi = require("./personaggi.js");
 const giganti = require("./giganti.js");
-const { attacco } = require("./combattimento.js");
+const { attacco } = require("./scontro.js");
 
 //Implementa degli intervalli per le funzioni, con un ciclo temporale finche' la vita di uno dei due non arriva a zero.
 // Per adesso la scelta dei personaggi non sara' implementata ma saranno scelti da noi
